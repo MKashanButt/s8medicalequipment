@@ -108,7 +108,6 @@ export default function Header() {
           </nav>
         </header>
       </div>
-      <div></div>
     </section>
   );
 }
