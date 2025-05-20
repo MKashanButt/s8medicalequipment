@@ -62,7 +62,7 @@
   {
     "id": "tens-unit",
     "name": "TENS Unit",
-    "image": "/products/tens-unit.jpg",
+    "image": "/products/tense-unit.jpg",
     "keyBenefits": [
       "Transcutaneous Electrical Nerve Stimulation device",
       "Helps relieve pain through electric pulses",
@@ -72,7 +72,7 @@
   {
     "id": "lymphedema-massagers",
     "name": "Lymphedema Pump Massagers",
-    "image": "/products/lymphedema-massagers.jpg",
+    "image": "/products/lymphedema-pump-massagers.jpg",
     "keyBenefits": [
       "Promotes lymphatic drainage",
       "Reduces swelling and improves circulation",

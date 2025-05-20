@@ -292,7 +292,7 @@ export default function Home() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-48 object-cover mb-4 rounded"
+                className="w-full h-48 object-fit mb-4 rounded"
               />
               <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
               <ul className="list-disc list-inside text-sm text-gray-700">
