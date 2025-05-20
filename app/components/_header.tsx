@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { PrimaryButton } from "./_button";
+import Link from "next/link";
 
 export default function Header() {
   return (
-    <section className="absolute w-full top-0 left-0 z-10 bg-black/10">
+    <section className="absolute w-full top-0 left-0 z-10 bg-black/10 z-100">
       <div className="bg-[#65AD47] p-2">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
@@ -98,9 +99,11 @@ export default function Header() {
               <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
                 News
               </li>
-              <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
-                About Us
-              </li>
+              <Link href="/about-us">
+                <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
+                  About Us
+                </li>
+              </Link>
               <li>
                 <PrimaryButton>Contact Us</PrimaryButton>
               </li>
