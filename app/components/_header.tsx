@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PrimaryButton } from "./_button";
 
 export default function Header() {
   return (
@@ -30,9 +31,9 @@ export default function Header() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                   <rect width="4" height="12" x="2" y="9" />
@@ -47,9 +48,9 @@ export default function Header() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
@@ -62,9 +63,9 @@ export default function Header() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -78,7 +79,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <header className="flex w-full justify-between items-center py-4 text-white">
           <Image
-            src="/logo.png"
+            src="/images/logo.png"
             width={200}
             height={50}
             alt="company logo s8-medical-equipment"
@@ -101,9 +102,7 @@ export default function Header() {
                 About Us
               </li>
               <li>
-                <button className="p-2 border-2 border-[#65AD47] bg-[#65AD47] text-white rounded-md transition transition-ease-out hover:bg-white hover:text-[#65AD47] hover:border-[#65AD47] cursor-pointer">
-                  Make an Appointment
-                </button>
+                <PrimaryButton>Contact Us</PrimaryButton>
               </li>
             </ul>
           </nav>

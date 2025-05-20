@@ -1,0 +1,82 @@
+[
+  {
+    "id": "knee-braces",
+    "name": "Knee Braces",
+    "image": "/products/knee-braces.jpg",
+    "keyBenefits": [
+      "Provides support for injured or weak knees",
+      "Reduces knee strain during physical activities",
+      "Helps alleviate knee pain and inflammation"
+    ]
+  },
+  {
+    "id": "brace-sleeves",
+    "name": "Brace Sleeves",
+    "image": "/products/brace-sleeves.jpg",
+    "keyBenefits": [
+      "Elastic sleeve for joint support",
+      "Improves circulation",
+      "Ideal for compression therapy"
+    ]
+  },
+  {
+    "id": "cgm-monitors",
+    "name": "CGM Monitors",
+    "image": "/products/cgm-monitors.jpg",
+    "keyBenefits": [
+      "Continuous glucose monitoring",
+      "Tracks blood sugar levels in real-time",
+      "Sends alerts for high or low readings"
+    ]
+  },
+  {
+    "id": "wheelchairs",
+    "name": "Wheelchairs",
+    "image": "/products/wheelchairs.jpg",
+    "keyBenefits": [
+      "Enables mobility for individuals with limited movement",
+      "Manual or powered options available",
+      "Designed for comfort and ease of use"
+    ]
+  },
+  {
+    "id": "uvb-light-wands",
+    "name": "UVB Light Wands",
+    "image": "/products/uvb-light-wands.jpg",
+    "keyBenefits": [
+      "Portable UVB therapy for skin conditions",
+      "Effective for psoriasis treatment",
+      "Delivers controlled UVB exposure"
+    ]
+  },
+  {
+    "id": "hip-braces",
+    "name": "Hip Braces",
+    "image": "/products/hip-braces.jpg",
+    "keyBenefits": [
+      "Supports the hip joint",
+      "Ideal for post-surgery recovery",
+      "Reduces hip strain during movement"
+    ]
+  },
+  {
+    "id": "tens-unit",
+    "name": "TENS Unit",
+    "image": "/products/tens-unit.jpg",
+    "keyBenefits": [
+      "Transcutaneous Electrical Nerve Stimulation device",
+      "Helps relieve pain through electric pulses",
+      "Portable and easy to use"
+    ]
+  },
+  {
+    "id": "lymphedema-massagers",
+    "name": "Lymphedema Pump Massagers",
+    "image": "/products/lymphedema-massagers.jpg",
+    "keyBenefits": [
+      "Promotes lymphatic drainage",
+      "Reduces swelling and improves circulation",
+      "Adjustable pressure levels"
+    ]
+  }
+]
