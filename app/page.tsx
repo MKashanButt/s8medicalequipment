@@ -281,7 +281,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-[80%] py-4 flex flex-col gap-4 mx-auto">
-        <h2 className="text-4xl">Services</h2>
+        <h2 className="text-4xl">Products</h2>
         <hr className="h-1 bg-[#65AD47] full border-[#65AD47] rounded-lg" />
         <div className="grid grid-cols-3 gap-4">
           {products.map((product) => (
