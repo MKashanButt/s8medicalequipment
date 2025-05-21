@@ -90,14 +90,13 @@ export default function Header() {
               <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
                 Home
               </li>
-              <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
-                Products
-              </li>
+              <Link href="/products">
+                <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
+                  Products
+                </li>
+              </Link>
               <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
                 Services
-              </li>
-              <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
-                News
               </li>
               <Link href="/about-us">
                 <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
