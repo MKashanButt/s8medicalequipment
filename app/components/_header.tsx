@@ -79,25 +79,31 @@ export default function Header() {
       </div>
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <header className="flex w-full justify-between items-center py-4 text-white">
-          <Image
-            src="/images/logo.png"
-            width={200}
-            height={50}
-            alt="company logo s8-medical-equipment"
-          />
+          <Link href="/">
+            <Image
+              src="/images/logo.png"
+              width={200}
+              height={50}
+              alt="company logo s8-medical-equipment"
+            />
+          </Link>
           <nav>
             <ul className="flex space-x-5 items-center">
-              <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
-                Home
-              </li>
+              <Link href="/">
+                <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
+                  Home
+                </li>
+              </Link>
               <Link href="/products">
                 <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
                   Products
                 </li>
               </Link>
-              <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
-                Services
-              </li>
+              <Link href="/services">
+                <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
+                  Services
+                </li>
+              </Link>
               <Link href="/about-us">
                 <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
                   About Us
