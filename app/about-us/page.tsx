@@ -43,7 +43,7 @@ export default function AboutUs() {
           <SecondaryButton className="px-12 mt-4">Learn More</SecondaryButton>
         </div>
       </section>
-      <section className="flex gap-4 w-[80%] mx-auto">
+      <section className="flex gap-4 w-[80%] mx-auto border-b-1 border-[#65AD47]">
         <div className="w-[60%]">
           <div className="flex py-4 justify-between items-center border-b-2 border-[#65AD47] mb-4">
             <h2 className="text-2xl font-bold tracking-wide">
