@@ -8,6 +8,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { PrimaryButton, SecondaryButton } from "./components/_button";
 import { useEffect, useState } from "react";
 import productsData from "@/public/data/products.json";
+import Link from "next/link";
 
 interface Product {
   id: string;
@@ -35,7 +36,6 @@ export default function Home() {
           }}
           className="w-full h-full"
         >
-          {/* Hero Slide */}
           <SwiperSlide className="relative w-full h-full">
             <Image
               src="/images/main-slider-img-2.jpg"
@@ -46,20 +46,26 @@ export default function Home() {
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 flex flex-col justify-center px-4 gap-4 mt-8 text-center">
               <h1 className="text-white text-6xl md:text-5xl font-bold tracking-wider uppercase">
-                Bringing Health to life
+                Accuracy You Can Rely On
                 <br />
-                for the whole family
+                Quality You Can Depend On
               </h1>
               <hr className="w-1/3 border-white h-2 bg-white rounded-lg mx-auto" />
               <p className="w-2/3 text-white mx-auto">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
-                sunt vitae quos distinctio omnis nesciunt libero ut,
-                exercitationem quam voluptate. Vitae eligendi ad possimus
-                necessitatibus eaque tempore ut distinctio a voluptas ducimus?
+                Our medical equipment and devices both meet and surpass global
+                healthcare standards. Each solution guarantees unmatched safety,
+                accuracy, and consistent performance across a range of medical
+                situations, from high-dependency hospitals to outpatient
+                clinics, and is tested for durability and supported by clinical
+                validation.
               </p>
               <div className="flex gap-4 mx-auto">
-                <PrimaryButton>View Services</PrimaryButton>
-                <SecondaryButton>Learn More</SecondaryButton>
+                <Link href="/services">
+                  <PrimaryButton>View Services</PrimaryButton>
+                </Link>
+                <Link href="/about-us">
+                  <SecondaryButton>Learn More</SecondaryButton>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
@@ -73,20 +79,25 @@ export default function Home() {
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 flex flex-col justify-center px-4 gap-4 mt-8">
               <h1 className="text-white text-6xl md:text-5xl font-bold tracking-wider uppercase">
-                Bringing Health to life
+                Your Medical
                 <br />
-                for the whole family
+                Innovation Partner
               </h1>
               <hr className="w-1/3 border-white h-2 bg-white rounded-lg" />
               <p className="w-2/3 text-white">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
-                sunt vitae quos distinctio omnis nesciunt libero ut,
-                exercitationem quam voluptate. Vitae eligendi ad possimus
-                necessitatibus eaque tempore ut distinctio a voluptas ducimus?
+                From product selection and procurement to installation,
+                training, and continuing technical support, we offer complete
+                end-to-end solutions that address every phase of the healthcare
+                equipment lifecycle. Our seamless service structure is designed
+                to guarantee optimum efficiency and less downtime.
               </p>
               <div className="flex gap-4">
-                <PrimaryButton>View Services</PrimaryButton>
-                <SecondaryButton>Learn More</SecondaryButton>
+                <Link href="/services">
+                  <PrimaryButton>View Services</PrimaryButton>
+                </Link>
+                <Link href="/about-us">
+                  <SecondaryButton>Learn More</SecondaryButton>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
@@ -111,21 +122,23 @@ export default function Home() {
           </ul>
         </div>
         <div className="flex flex-col gap-4 w-1/3 border-r-2 border-[#65AD47] px-4">
-          <h1 className="text-[#65AD47] font-bold text-2xl">
-            Doctors Timetable
-          </h1>
+          <h1 className="text-[#65AD47] font-bold text-2xl">About Us</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-            deleniti! Vel qui labore hic enim similique quasi aspernatur soluta
-            cumque?
+            From product selection and procurement to installation, training,
+            and continuing technical support, we offer complete end-to-end
+            solutions that address every phase of the healthcare equipment
+            lifecycle. Our seamless service structure is designed to guarantee
+            optimum efficiency and less downtime.
           </p>
-          <PrimaryButton>View Timetable</PrimaryButton>
+          <Link href="/about-us">
+            <PrimaryButton>Learn More</PrimaryButton>
+          </Link>
         </div>
         <div className="flex flex-col gap-4 w-1/3 px-4">
           <h1 className="text-[#65AD47] font-bold text-2xl flex gap-2">
             Emergency Cases
           </h1>
-          <p className="items-center text-4xl flex gap-4">
+          <p className="items-center text-3xl flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -134,18 +147,18 @@ export default function Home() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="w-8 h-8"
+              className="w-6 h-8"
             >
               <path d="M13 2a9 9 0 0 1 9 9" />
               <path d="M13 6a5 5 0 0 1 5 5" />
               <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
             </svg>
-            800 123 45 67
+            +1 (510)-573-1931
           </p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit unde
-            placeat mollitia delectus fugit voluptatibus optio quia eos esse
-            ducimus?
+            We are only a phone call away if you need medical equipment
+            immediately. Call S8 Medical Equipments at +1 (510)-573-1931, 24/7,
+            for prompt assistance and dependable support whenever you need it.
           </p>
         </div>
       </section>
@@ -170,11 +183,17 @@ export default function Home() {
             </div>
             <h2 className="text-4xl font-bold tracking-wide">DME Equipments</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam porro tenetur maiores sapiente voluptatem maxime. Harum
-              quo incidunt unde minima culpa voluptates? Rem enim nam itaque
-              vitae maxime hic tempora atque animi mollitia officia alias, quae
-              est odio optio voluptates.
+              In order to assist patients' long-term care, rehabilitation, and
+              enhanced quality of life at home or in clinical settings, S8
+              Medical Equipments offers a wide selection of Durable Medical
+              Equipment (DME).
+            </p>
+            <p>
+              We guarantee that every product satisfies stringent safety
+              regulations and is supported by knowledgeable support and
+              maintenance services, whether for individual patients or
+              healthcare facilities. You can rely on S8 to provide equipment
+              that works when it counts most.
             </p>
             <PrimaryButton>
               Learn More
@@ -219,11 +238,16 @@ export default function Home() {
             </div>
             <h2 className="text-4xl font-bold tracking-wide">Caregivers</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam porro tenetur maiores sapiente voluptatem maxime. Harum
-              quo incidunt unde minima culpa voluptates? Rem enim nam itaque
-              vitae maxime hic tempora atque animi mollitia officia alias, quae
-              est odio optio voluptates.
+              Whether for individual patients or medical institutions, we
+              promise that every product meets strict safety standards and is
+              backed by competent support and maintenance services.
+            </p>
+            <p>
+              From ergonomic lifting aids and mobility tools to monitoring
+              systems and daily living support products, our caregiver-focused
+              solutions are designed to reduce strain, enhance safety, and
+              improve the overall caregiving experience. We’re here to empower
+              those who care for others.
             </p>
             <PrimaryButton>
               Learn More
@@ -266,15 +290,20 @@ export default function Home() {
               width={200}
               height={100}
             />
-            <h2 className="text-4xl font-bold">Welcome To Our Clinic!</h2>
+            <h2 className="text-4xl font-bold">Our Services!</h2>
             <p>
-              We offer extensive medical procedures to outbound and inbound
-              patients.
+              We at S8 Medical Equipments provide a broad range of medical
+              solutions designed to satisfy the demands of contemporary
+              healthcare. Our services are based on safety, performance, and
+              long-term dependability, and range from premium Durable Medical
+              Equipment (DME) and caregiver support tools to cutting-edge
+              diagnostic instruments and clinic-grade machinery.
             </p>
             <p>
-              Our major areas of specialization include oncology, orthopedics,
-              cardiology, IVF Treatment, urology, neurosurgery,
-              gastroenterology, plastic surgery and many other departments.
+              Our staff provides professional advice, seamless assistance, and
+              equipment that is trusted by experts across the country,
+              regardless of whether you are a hospital, clinic, or home-care
+              provider. We empower, train, and assist in addition to providing.
             </p>
             <SecondaryButton>Get In Touch</SecondaryButton>
           </div>
