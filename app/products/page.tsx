@@ -4,6 +4,7 @@ import Image from "next/image";
 import { PrimaryButton, SecondaryButton } from "../components/_button";
 import productData from "@/public/data/products.json";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface Product {
   id: string;
@@ -30,18 +31,21 @@ export default function Products() {
         />
         <div className="flex gap-4 flex-col bg-black/50 z-40 w-full h-full items-center justify-center text-white text-center pt-28 select-none">
           <h1 className="text-6xl font-bold tracking-wide">
-            One of the Top State Hospitals
+            Examine Precision. Discover Innovation.
           </h1>
           <p className="w-[80%] mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            numquam, dicta impedit commodi earum quibusdam natus. Numquam est
-            minima nisi sint repellendus vero doloribus, tempora nam omnis
-            obcaecati, laudantium cum, dolor odio? Dignissimos at excepturi
-            deleniti nobis, neque dolorem inventore consequatur. Exercitationem
-            asperiores, blanditiis aperiam iusto officia voluptatum molestiae
-            optio.
+            S8 Medical Equipments helps healthcare professionals at every level
+            with anything from cutting-edge diagnostic systems and critical care
+            solutions to routine clinical necessities and home-use gadgets. Our
+            products are designed to fulfill strict specifications and produce
+            reliable results, whether you're outfitting a major hospital, a solo
+            office, or a home-care setting. With innovation at the heart of our
+            business, we not only stay ahead of the curve but also contribute to
+            its direction.
           </p>
-          <SecondaryButton className="px-12 mt-4">Learn More</SecondaryButton>
+          <Link href="/about-us">
+            <SecondaryButton className="px-12 mt-4">Learn More</SecondaryButton>
+          </Link>
         </div>
       </section>
       <section className="w-[80%] mx-auto border-b-2 border-[#65AD47]">
@@ -63,9 +67,8 @@ export default function Products() {
               Wheelchairs
             </h4>
             <p className="text-center">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-              ratione esse quos minima dolorem, optio ducimus nostrum labore
-              reiciendis. Facilis.
+              Designed to be independent, comfortable, and mobile. Sturdy,
+              lightweight, and designed for daily use.
             </p>
             <PrimaryButton className="w-full mt-4">Learn More</PrimaryButton>
           </div>
@@ -83,9 +86,8 @@ export default function Products() {
               Knee Braces
             </h4>
             <p className="text-center">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-              ratione esse quos minima dolorem, optio ducimus nostrum labore
-              reiciendis. Facilis.
+              Whether you're recuperating or continuing to be active, keep your
+              joints stable, supported, and protected.
             </p>
             <PrimaryButton className="w-full mt-4">Learn More</PrimaryButton>
           </div>
@@ -103,9 +105,8 @@ export default function Products() {
               CGM Monitors
             </h4>
             <p className="text-center">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-              ratione esse quos minima dolorem, optio ducimus nostrum labore
-              reiciendis. Facilis.
+              Accurately monitor blood glucose levels in real time. Improve your
+              diabetes treatment by using more intelligent monitoring.
             </p>
             <PrimaryButton className="w-full mt-4">Learn More</PrimaryButton>
           </div>
@@ -123,9 +124,8 @@ export default function Products() {
               Tense Unit
             </h4>
             <p className="text-center">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-              ratione esse quos minima dolorem, optio ducimus nostrum labore
-              reiciendis. Facilis.
+              At your fingers is portable pain alleviation. Use scientifically
+              proven technology to address both acute and chronic pain.
             </p>
             <PrimaryButton className="w-full mt-4">Learn More</PrimaryButton>
           </div>
@@ -188,13 +188,12 @@ export default function Products() {
               className="mx-auto"
             />
             <h4 className="flex gap-2 items-center justify-center text-2xl font-bold tracking-wide">
-              Lorem Ipsum
+              Emily R
             </h4>
-            <p className="text-xs my-2">Title</p>
+            <p className="text-xs my-2">Freedom in Motion</p>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              illum voluptatibus aut beatae impedit hic cumque quibusdam
-              exercitationem deleniti debitis?
+              The transition to this wheelchair completely altered day-to-day
+              living. It folds up easily for travel and is smooth and light.
             </p>
           </div>
           <div className="px-2 py-4 shadow-sm rounded-lg text-center">
@@ -206,13 +205,12 @@ export default function Products() {
               className="mx-auto"
             />
             <h4 className="flex gap-2 items-center justify-center text-2xl font-bold tracking-wide">
-              Lorem Ipsum
+              David M
             </h4>
-            <p className="text-xs my-2">Title</p>
+            <p className="text-xs my-2">Knee Brace That Actually Works</p>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              illum voluptatibus aut beatae impedit hic cumque quibusdam
-              exercitationem deleniti debitis?
+              Over the years, I've tried a dozen different knee braces. This one
+              supported me well without making me feel heavy. It holds up.
             </p>
           </div>
           <div className="px-2 py-4 shadow-sm rounded-lg text-center">
@@ -224,13 +222,13 @@ export default function Products() {
               className="mx-auto"
             />
             <h4 className="flex gap-2 items-center justify-center text-2xl font-bold tracking-wide">
-              Lorem Ipsum
+              Sara T
             </h4>
-            <p className="text-xs my-2">Title</p>
+            <p className="text-xs my-2">Game-Changer for Diabetes</p>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              illum voluptatibus aut beatae impedit hic cumque quibusdam
-              exercitationem deleniti debitis?
+              The CGM monitor has been a life saver. I can steer clear of
+              hazardous increases thanks to real-time tracking, and the
+              smartphone warnings are also useful.
             </p>
           </div>
           <div className="px-2 py-4 shadow-sm rounded-lg text-center">
@@ -242,13 +240,13 @@ export default function Products() {
               className="mx-auto"
             />
             <h4 className="flex gap-2 items-center justify-center text-2xl font-bold tracking-wide">
-              Lorem Ipsum
+              Marcus A
             </h4>
-            <p className="text-xs my-2">Title</p>
+            <p className="text-xs my-2">Pain Relief in My Pocket</p>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              illum voluptatibus aut beatae impedit hic cumque quibusdam
-              exercitationem deleniti debitis?
+              Compared to certain medications, the TENS machine is more
+              effective at managing my back pain. It is easy to use, small, and
+              rechargeable.
             </p>
           </div>
         </div>
