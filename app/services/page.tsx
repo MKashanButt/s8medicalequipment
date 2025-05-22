@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PrimaryButton, SecondaryButton } from "../components/_button";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -13,16 +14,15 @@ export default function Services() {
         />
         <div className="flex gap-4 flex-col bg-black/50 z-40 w-full h-full items-center justify-center text-white text-center pt-28 select-none">
           <h1 className="text-6xl font-bold tracking-wide">
-            One of the Top State Hospitals
+            Comprehensive Medical Solutions
           </h1>
           <p className="w-[80%] mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            numquam, dicta impedit commodi earum quibusdam natus. Numquam est
-            minima nisi sint repellendus vero doloribus, tempora nam omnis
-            obcaecati, laudantium cum, dolor odio? Dignissimos at excepturi
-            deleniti nobis, neque dolorem inventore consequatur. Exercitationem
-            asperiores, blanditiis aperiam iusto officia voluptatum molestiae
-            optio.
+            At S8 Medical Equipments, we offer complete healthcare solutions
+            rather than simply equipment supply. We are your go-to source for
+            high-quality service, from equipment setup and consulting to
+            training, upkeep, and post-purchase assistance. We guarantee smooth
+            integration and dependable performance at every stage, whether for
+            clinics, hospitals, or home care agencies.
           </p>
           <SecondaryButton className="px-12 mt-4">Learn More</SecondaryButton>
         </div>
@@ -46,21 +46,23 @@ export default function Services() {
           </ul>
         </div>
         <div className="flex flex-col gap-4 w-1/3 border-r-2 border-[#65AD47] px-4">
-          <h1 className="text-[#65AD47] font-bold text-2xl">
-            Doctors Timetable
-          </h1>
+          <h1 className="text-[#65AD47] font-bold text-2xl">About Us</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-            deleniti! Vel qui labore hic enim similique quasi aspernatur soluta
-            cumque?
+            From product selection and procurement to installation, training,
+            and continuing technical support, we offer complete end-to-end
+            solutions that address every phase of the healthcare equipment
+            lifecycle. Our seamless service structure is designed to guarantee
+            optimum efficiency and less downtime.
           </p>
-          <PrimaryButton>View Timetable</PrimaryButton>
+          <Link href="/about-us">
+            <PrimaryButton>Learn More</PrimaryButton>
+          </Link>
         </div>
         <div className="flex flex-col gap-4 w-1/3 px-4">
           <h1 className="text-[#65AD47] font-bold text-2xl flex gap-2">
             Emergency Cases
           </h1>
-          <p className="items-center text-4xl flex gap-4">
+          <p className="items-center text-3xl flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -69,18 +71,18 @@ export default function Services() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="w-8 h-8"
+              className="w-6 h-8"
             >
               <path d="M13 2a9 9 0 0 1 9 9" />
               <path d="M13 6a5 5 0 0 1 5 5" />
               <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
             </svg>
-            800 123 45 67
+            +1 (510)-573-1931
           </p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit unde
-            placeat mollitia delectus fugit voluptatibus optio quia eos esse
-            ducimus?
+            We are only a phone call away if you need medical equipment
+            immediately. Call S8 Medical Equipments at +1 (510)-573-1931, 24/7,
+            for prompt assistance and dependable support whenever you need it.
           </p>
         </div>
       </section>
@@ -102,39 +104,46 @@ export default function Services() {
               width={200}
               height={100}
             />
-            <h2 className="text-4xl font-bold">Welcome To Our Clinic!</h2>
+            <h2 className="text-4xl font-bold">
+              Welcome To Our S8 Medical Equipment!
+            </h2>
             <p>
-              We offer extensive medical procedures to outbound and inbound
-              patients.
+              We at S8 Medical Equipments provide a broad range of medical
+              solutions designed to satisfy the demands of contemporary
+              healthcare. Our services are based on safety, performance, and
+              long-term dependability, and range from premium Durable Medical
+              Equipment (DME) and caregiver support tools to cutting-edge
+              diagnostic instruments and clinic-grade machinery.
             </p>
             <p>
-              Our major areas of specialization include oncology, orthopedics,
-              cardiology, IVF Treatment, urology, neurosurgery,
-              gastroenterology, plastic surgery and many other departments.
+              Our staff provides professional advice, seamless assistance, and
+              equipment that is trusted by experts across the country,
+              regardless of whether you are a hospital, clinic, or home-care
+              provider. We empower, train, and assist in addition to providing.
             </p>
             <SecondaryButton>Get In Touch</SecondaryButton>
           </div>
         </div>
       </section>
       <section className="w-[80%] mx-auto py-4">
-        <h2 className="text-4xl text-center mb-4">
-          Lorem ipsum dolor sit amet.
+        <h2 className="text-4xl text-center mb-4 font-bold tracking-wide">
+          The professionals trust it. Innovation Drives Us
         </h2>
         <p className="w-[80%] mx-auto text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-          temporibus quis hic voluptate velit nemo dignissimos quasi eligendi
-          necessitatibus, voluptatibus ullam perferendis omnis aut odio quam nam
-          provident perspiciatis dolores!
+          Discover our most sought-after medical devices and vital healthcare
+          offerings, all of which are made to provide accuracy, dependability,
+          and assistance when it counts most. We can assist you with improving
+          your clinic or increasing the scope of treatment you can provide.
         </p>
       </section>
       <section className="w-[80%] py-4 flex gap-4 mx-auto">
         <div className="w-[40%] mx-auto border-b-2 border-[#65AD47]">
           <hr className="h-1 bg-[#65AD47] full border-[#65AD47] rounded-lg" />
-          <h2 className="text-4xl font-bold tracking-wide py-4">
+          <h2 className="text-center text-4xl font-bold tracking-wide py-4">
             Trending Products
           </h2>
           <hr className="h-1 bg-[#65AD47] full border-[#65AD47] rounded-lg" />
-          <div className="grid grid-cols-2 gap-8 my-4">
+          <div className="grid grid-cols-1 gap-8 my-4">
             <div className="relative flex flex-col items-center justify-center">
               <Image
                 src="/products/wheelchairs.jpg"
@@ -149,9 +158,8 @@ export default function Services() {
                 Wheelchairs
               </h4>
               <p className="text-center text-sm">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                ratione esse quos minima dolorem, optio ducimus nostrum labore
-                reiciendis. Facilis.
+                Designed to be independent, comfortable, and mobile. Sturdy,
+                lightweight, and designed for daily use.
               </p>
               <PrimaryButton className="w-full mt-4">Learn More</PrimaryButton>
             </div>
@@ -169,9 +177,8 @@ export default function Services() {
                 Knee Braces
               </h4>
               <p className="text-center text-sm">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                ratione esse quos minima dolorem, optio ducimus nostrum labore
-                reiciendis. Facilis.
+                Whether you're recuperating or continuing to be active, keep
+                your joints stable, supported, and protected.
               </p>
               <PrimaryButton className="w-full mt-4">Learn More</PrimaryButton>
             </div>
@@ -189,9 +196,8 @@ export default function Services() {
                 CGM Monitors
               </h4>
               <p className="text-center text-sm">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                ratione esse quos minima dolorem, optio ducimus nostrum labore
-                reiciendis. Facilis.
+                Accurately monitor blood glucose levels in real time. Improve
+                your diabetes treatment by using more intelligent monitoring.
               </p>
               <PrimaryButton className="w-full mt-4">Learn More</PrimaryButton>
             </div>
@@ -209,9 +215,8 @@ export default function Services() {
                 Tense Unit
               </h4>
               <p className="text-center text-sm">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                ratione esse quos minima dolorem, optio ducimus nostrum labore
-                reiciendis. Facilis.
+                At your fingers is portable pain alleviation. Use scientifically
+                proven technology to address both acute and chronic pain.
               </p>
               <PrimaryButton className="w-full mt-4">Learn More</PrimaryButton>
             </div>
@@ -239,11 +244,17 @@ export default function Services() {
                 DME Equipments
               </h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam porro tenetur maiores sapiente voluptatem maxime.
-                Harum quo incidunt unde minima culpa voluptates? Rem enim nam
-                itaque vitae maxime hic tempora atque animi mollitia officia
-                alias, quae est odio optio voluptates.
+                In order to assist patients' long-term care, rehabilitation, and
+                enhanced quality of life at home or in clinical settings, S8
+                Medical Equipments offers a wide selection of Durable Medical
+                Equipment (DME).
+              </p>
+              <p>
+                We guarantee that every product satisfies stringent safety
+                regulations and is supported by knowledgeable support and
+                maintenance services, whether for individual patients or
+                healthcare facilities. You can rely on S8 to provide equipment
+                that works when it counts most.
               </p>
               <PrimaryButton className="mt-3">
                 Learn More
@@ -288,11 +299,16 @@ export default function Services() {
               </div>
               <h2 className="text-4xl font-bold tracking-wide">Caregivers</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam porro tenetur maiores sapiente voluptatem maxime.
-                Harum quo incidunt unde minima culpa voluptates? Rem enim nam
-                itaque vitae maxime hic tempora atque animi mollitia officia
-                alias, quae est odio optio voluptates.
+                Whether for individual patients or medical institutions, we
+                promise that every product meets strict safety standards and is
+                backed by competent support and maintenance services.
+              </p>
+              <p>
+                From ergonomic lifting aids and mobility tools to monitoring
+                systems and daily living support products, our caregiver-focused
+                solutions are designed to reduce strain, enhance safety, and
+                improve the overall caregiving experience. We’re here to empower
+                those who care for others.
               </p>
               <PrimaryButton className="mt-3">
                 Learn More
@@ -333,13 +349,12 @@ export default function Services() {
               className="mx-auto"
             />
             <h4 className="flex gap-2 items-center justify-center text-2xl font-bold tracking-wide">
-              Lorem Ipsum
+              Emily R
             </h4>
-            <p className="text-xs my-2">Title</p>
+            <p className="text-xs my-2">Freedom in Motion</p>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              illum voluptatibus aut beatae impedit hic cumque quibusdam
-              exercitationem deleniti debitis?
+              The transition to this wheelchair completely altered day-to-day
+              living. It folds up easily for travel and is smooth and light.
             </p>
           </div>
           <div className="px-2 py-4 shadow-sm rounded-lg text-center">
@@ -351,13 +366,12 @@ export default function Services() {
               className="mx-auto"
             />
             <h4 className="flex gap-2 items-center justify-center text-2xl font-bold tracking-wide">
-              Lorem Ipsum
+              David M
             </h4>
-            <p className="text-xs my-2">Title</p>
+            <p className="text-xs my-2">Knee Brace That Actually Works</p>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              illum voluptatibus aut beatae impedit hic cumque quibusdam
-              exercitationem deleniti debitis?
+              Over the years, I've tried a dozen different knee braces. This one
+              supported me well without making me feel heavy. It holds up.
             </p>
           </div>
           <div className="px-2 py-4 shadow-sm rounded-lg text-center">
@@ -369,13 +383,13 @@ export default function Services() {
               className="mx-auto"
             />
             <h4 className="flex gap-2 items-center justify-center text-2xl font-bold tracking-wide">
-              Lorem Ipsum
+              Sara T
             </h4>
-            <p className="text-xs my-2">Title</p>
+            <p className="text-xs my-2">Game-Changer for Diabetes</p>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              illum voluptatibus aut beatae impedit hic cumque quibusdam
-              exercitationem deleniti debitis?
+              The CGM monitor has been a life saver. I can steer clear of
+              hazardous increases thanks to real-time tracking, and the
+              smartphone warnings are also useful.
             </p>
           </div>
           <div className="px-2 py-4 shadow-sm rounded-lg text-center">
@@ -387,13 +401,13 @@ export default function Services() {
               className="mx-auto"
             />
             <h4 className="flex gap-2 items-center justify-center text-2xl font-bold tracking-wide">
-              Lorem Ipsum
+              Marcus A
             </h4>
-            <p className="text-xs my-2">Title</p>
+            <p className="text-xs my-2">Pain Relief in My Pocket</p>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              illum voluptatibus aut beatae impedit hic cumque quibusdam
-              exercitationem deleniti debitis?
+              Compared to certain medications, the TENS machine is more
+              effective at managing my back pain. It is easy to use, small, and
+              rechargeable.
             </p>
           </div>
         </div>
