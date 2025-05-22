@@ -4,35 +4,38 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <section className="absolute w-full top-0 left-0 z-10 bg-black/10 z-100">
+    <section className="lg:absolute sm:relative w-full top-0 left-0 z-100 lg:bg-black/10">
+      {/* Top info bar */}
       <div className="bg-[#65AD47] p-2">
-        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center divide-x-2">
-              <div className="w-[400px] text-white text-sm p-2 w-1/2">
-                <p className="flex gap-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2">
+            <div className="flex flex-col md:flex-row md:items-center md:divide-x-2 w-full md:w-auto">
+              <div className="text-white text-xs md:text-sm p-1 md:p-2 text-center md:text-left">
+                <p className="flex flex-wrap justify-center md:justify-start gap-1">
                   <b>Location:</b> 3155 Kearney St Suite # 170 Fremont, CA 94538
                 </p>
               </div>
-              <div className="w-[650px] text-white text-sm p-2 flex justify-between border-r-2">
-                <p className="w-[250px] flex gap-2">
+              <div className="text-white text-xs md:text-sm p-1 md:p-2 flex flex-col md:flex-row justify-between gap-2 md:gap-4 md:border-r-2">
+                <p className="flex justify-center md:justify-start gap-1">
                   <b>Contact us:</b> +1 (510)-573-1931
                 </p>
-                <p className="w-[300px] flex gap-2">
+                <p className="flex justify-center md:justify-start gap-1">
                   <b>Email:</b> info@s8medicalequipmentllc.com
                 </p>
               </div>
             </div>
-            <div className="w-[150px] flex items-center gap-1">
+
+            {/* Social icons */}
+            <div className="w-[10%] flex items-center gap-1">
               <Link
                 href="https://www.linkedin.com/company/s8squadmedical/"
-                target="__blank"
+                target="_blank"
               >
-                <div className="p-2">
+                <div className="p-1 md:p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="white"
@@ -48,13 +51,13 @@ export default function Header() {
               </Link>
               <Link
                 href="https://www.facebook.com/s8squadequipment"
-                target="__blank"
+                target="_blank"
               >
-                <div className="p-2">
+                <div className="p-1 md:p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="white"
@@ -70,40 +73,48 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <header className="flex w-full justify-between items-center py-4 text-white">
-          <Link href="/">
+
+      {/* Main header with logo and navigation */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="flex flex-col md:flex-row w-full justify-between items-center py-4 lg:text-white sm:text-black">
+          {/* Logo */}
+          <Link href="/" className="mb-4 md:mb-0">
             <Image
               src="/images/logo.png"
               width={200}
               height={50}
               alt="company logo s8-medical-equipment"
+              className="w-40 md:w-48 lg:w-52"
             />
           </Link>
-          <nav>
-            <ul className="flex space-x-5 items-center">
+
+          {/* Navigation */}
+          <nav className="w-full md:w-auto">
+            <ul className="flex flex-wrap justify-center gap-1 md:gap-2 lg:gap-5 items-center">
               <Link href="/">
-                <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
+                <li className="border-b-2 border-transparent hover:border-[#65AD47] px-2 py-1 cursor-pointer transition transition-ease-out text-sm md:text-base">
                   Home
                 </li>
               </Link>
               <Link href="/products">
-                <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
+                <li className="border-b-2 border-transparent hover:border-[#65AD47] px-2 py-1 cursor-pointer transition transition-ease-out text-sm md:text-base">
                   Products
                 </li>
               </Link>
               <Link href="/services">
-                <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
+                <li className="border-b-2 border-transparent hover:border-[#65AD47] px-2 py-1 cursor-pointer transition transition-ease-out text-sm md:text-base">
                   Services
                 </li>
               </Link>
               <Link href="/about-us">
-                <li className="border-b-2 border-transparent hover:border-[#65AD47] p-2 cursor-pointer transition transition-ease-out">
+                <li className="border-b-2 border-transparent hover:border-[#65AD47] px-2 py-1 cursor-pointer transition transition-ease-out text-sm md:text-base">
                   About Us
                 </li>
               </Link>
-              <li>
-                <PrimaryButton>Contact Us</PrimaryButton>
+              <li className="mt-2 md:mt-0">
+                <PrimaryButton className="text-sm md:text-base px-3 py-1 md:px-4 md:py-2">
+                  Contact Us
+                </PrimaryButton>
               </li>
             </ul>
           </nav>
