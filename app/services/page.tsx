@@ -86,14 +86,15 @@ export default function Services() {
       </section>
       <section className="h-screen py-4 relative flex">
         <Image
-          src="/images/fullwidth-img-1.jpeg"
+          src="/images/services-banner.jpg"
           alt="doctor section image"
           layout="fill"
           objectFit="cover"
           quality={100}
           className="w-full h-screen absolute left-0 top-0 z-0"
         />
-        <div className="w-[80%] mx-auto flex items-center justify-between z-50 relative">
+        <div className="w-full h-full absolute top-0 left-0 bg-black/60 z-index-40"></div>
+        <div className="w-[80%] mx-auto flex items-center justify-between z-50 relative text-white">
           <div className="flex flex-col gap-8 w-1/2">
             <Image
               src="/images/logo.png"
