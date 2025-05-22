@@ -3,21 +3,27 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="w-[80%] mx-auto flex justify-between py-4 border-b border-[#65AD47]">
+    <footer className="bg-white">
+      {/* Top Section - Newsletter and Social */}
+      <div className="w-full px-4 md:w-[90%] lg:w-[80%] mx-auto flex flex-col md:flex-row justify-between items-center py-4 gap-4 border-b border-[#65AD47]">
         <form
           action=""
           method="POST"
-          className="flex bg-white rounded-md border-2 border-[#65AD47]"
+          className="w-full md:w-auto flex bg-white rounded-md border-2 border-[#65AD47]"
         >
           <input
             type="email"
             name="email"
             id="email"
-            className="w-[200px] p-2"
+            className="w-full md:w-[200px] p-2 focus:outline-none"
             placeholder="Enter Your Email"
+            required
           />
-          <button className="w-[50px] flex items-center justify-center">
+          <button
+            type="submit"
+            className="w-[50px] flex items-center justify-center bg-[#65AD47] text-white"
+            aria-label="Subscribe"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -26,19 +32,21 @@ export default function Footer() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="w-8 h-8"
+              className="w-6 h-6"
             >
               <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
               <rect x="2" y="4" width="20" height="16" rx="2" />
             </svg>
           </button>
         </form>
-        <div className="w-[150px] flex items-center gap-1">
+
+        <div className="flex items-center gap-1">
           <Link
             href="https://www.linkedin.com/company/s8squadmedical/"
-            target="__blank"
+            target="_blank"
+            aria-label="LinkedIn"
           >
-            <div className="p-2">
+            <div className="p-2 hover:bg-gray-100 rounded-full transition">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -58,9 +66,10 @@ export default function Footer() {
           </Link>
           <Link
             href="https://www.facebook.com/s8squadequipment"
-            target="__blank"
+            target="_blank"
+            aria-label="Facebook"
           >
-            <div className="p-2">
+            <div className="p-2 hover:bg-gray-100 rounded-full transition">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -78,66 +87,97 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <div className="flex w-[80%] mx-auto py-8">
-        <div className="w-1/4 p-2">
-          <Image
-            src="/images/logo.png"
-            width={200}
-            height={50}
-            alt="company logo s8-medical-equipment"
-          />
-          <p>
+
+      {/* Main Footer Content */}
+      <div className="w-full px-4 md:w-[90%] lg:w-[80%] mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Logo and Description */}
+        <div className="p-2">
+          <div className="mb-4">
+            <Image
+              src="/images/logo.png"
+              width={200}
+              height={50}
+              alt="company logo s8-medical-equipment"
+              className="w-40 lg:w-48"
+            />
+          </div>
+          <p className="text-sm">
             Devoted to improving healthcare using cutting-edge, dependable
             medical technologies. We empower experts globally.
           </p>
         </div>
-        <div className="w-1/4 p-2">
-          <h3 className="text-2xl font-bold tracking-wide">Services</h3>
-          <hr className="border border-[#65AD47] bg-[#65AD47] rounded-lg h-1 my-2" />
-          <ul className="list-disc ml-4">
-            <li>DME Equipments</li>
-            <li>Caregivers</li>
+
+        {/* Services */}
+        <div className="p-2">
+          <h3 className="text-xl md:text-2xl font-bold tracking-wide">
+            Services
+          </h3>
+          <hr className="border border-[#65AD47] bg-[#65AD47] rounded-lg h-1 my-2 w-3/4" />
+          <ul className="space-y-2">
+            <li className="hover:text-[#65AD47] transition">
+              <Link href="/services#dme">DME Equipments</Link>
+            </li>
+            <li className="hover:text-[#65AD47] transition">
+              <Link href="/services#caregivers">Caregivers</Link>
+            </li>
           </ul>
         </div>
-        <div className="w-1/4 p-2">
-          <h3 className="text-2xl font-bold tracking-wide">Head Office</h3>
-          <hr className="border border-[#65AD47] bg-[#65AD47] rounded-lg h-1 my-2" />
-          <p className="mb-4">3155 Kearney St Suite # 170 Fremont, CA 94538</p>
-          <p>
-            <b>Mon-Thu:</b> 9:30 – 21:00
-          </p>
-          <p>
-            <b>Fri:</b> 6:00 – 21:00
-          </p>
-          <p>
-            <b>Sat:</b> 10:00 – 15:00
-          </p>
+
+        {/* Head Office */}
+        <div className="p-2">
+          <h3 className="text-xl md:text-2xl font-bold tracking-wide">
+            Head Office
+          </h3>
+          <hr className="border border-[#65AD47] bg-[#65AD47] rounded-lg h-1 my-2 w-3/4" />
+          <address className="not-italic mb-4">
+            3155 Kearney St Suite # 170
+            <br />
+            Fremont, CA 94538
+          </address>
+          <div className="text-sm space-y-1">
+            <p>
+              <b>Mon-Thu:</b> 9:30 – 21:00
+            </p>
+            <p>
+              <b>Fri:</b> 6:00 – 21:00
+            </p>
+            <p>
+              <b>Sat:</b> 10:00 – 15:00
+            </p>
+          </div>
         </div>
-        <div className="w-1/4 p-2">
-          <h3 className="text-2xl font-bold tracking-wide">Head Office</h3>
-          <hr className="border border-[#65AD47] bg-[#65AD47] rounded-lg h-1 my-2" />
-          <ul className="list-disc ml-4">
-            <Link href="/">
-              <li>Home</li>
-            </Link>
-            <Link href="/services">
-              <li>Services</li>
-            </Link>
-            <Link href="/products">
-              <li>Products</li>
-            </Link>
-            <Link href="/about-us">
-              <li>About Us</li>
-            </Link>
-            {/* <Link href="/"> */}
-            <li>Contact Us</li>
-            {/* </Link> */}
+
+        {/* Quick Links */}
+        <div className="p-2">
+          <h3 className="text-xl md:text-2xl font-bold tracking-wide">
+            Quick Links
+          </h3>
+          <hr className="border border-[#65AD47] bg-[#65AD47] rounded-lg h-1 my-2 w-3/4" />
+          <ul className="space-y-2">
+            <li className="hover:text-[#65AD47] transition">
+              <Link href="/">Home</Link>
+            </li>
+            <li className="hover:text-[#65AD47] transition">
+              <Link href="/services">Services</Link>
+            </li>
+            <li className="hover:text-[#65AD47] transition">
+              <Link href="/products">Products</Link>
+            </li>
+            <li className="hover:text-[#65AD47] transition">
+              <Link href="/about-us">About Us</Link>
+            </li>
+            <li className="hover:text-[#65AD47] transition">
+              <Link href="/contact">Contact Us</Link>
+            </li>
           </ul>
         </div>
       </div>
-      <div className="p-2 text-center text-white bg-[#65AD47]">
-        <p>
-          Copyright <b>©</b> S8Medical Equipment LLC
+
+      {/* Copyright */}
+      <div className="p-4 text-center text-white bg-[#65AD47]">
+        <p className="text-sm">
+          Copyright <b>©</b> {new Date().getFullYear()} S8Medical Equipment LLC.
+          All Rights Reserved.
         </p>
       </div>
     </footer>
