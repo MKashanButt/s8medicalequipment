@@ -9,6 +9,8 @@ import { PrimaryButton, SecondaryButton } from "./components/_button";
 import { useEffect, useState } from "react";
 import productsData from "@/public/data/products.json";
 import Link from "next/link";
+import { closeDialog, toggleDialog } from "./utils/DialogHelper";
+import PopupForm from "./components/_popup_form";
 
 interface Product {
   id: string;
@@ -228,27 +230,29 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <PrimaryButton className="mt-2 w-full md:w-auto">
-              Learn More
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-6 h-6 ml-2"
-              >
-                <path d="M14 4.1 12 6" />
-                <path d="m5.1 8-2.9-.8" />
-                <path d="m6 12-1.9 2" />
-                <path d="M7.2 2.2 8 5.1" />
-                <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" />
-              </svg>
-            </PrimaryButton>
+            <Link href="/services">
+              <PrimaryButton className="mt-2 w-full md:w-full">
+                Learn More
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6 ml-2"
+                >
+                  <path d="M14 4.1 12 6" />
+                  <path d="m5.1 8-2.9-.8" />
+                  <path d="m6 12-1.9 2" />
+                  <path d="M7.2 2.2 8 5.1" />
+                  <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" />
+                </svg>
+              </PrimaryButton>
+            </Link>
           </div>
 
           {/* Caregivers */}
@@ -290,27 +294,29 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <PrimaryButton className="mt-2 w-full md:w-auto">
-              Learn More
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-6 h-6 ml-2"
-              >
-                <path d="M14 4.1 12 6" />
-                <path d="m5.1 8-2.9-.8" />
-                <path d="m6 12-1.9 2" />
-                <path d="M7.2 2.2 8 5.1" />
-                <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" />
-              </svg>
-            </PrimaryButton>
+            <Link href="/services" className="w-full">
+              <PrimaryButton className="mt-2 w-full md:w-full">
+                Learn More
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6 ml-2"
+                >
+                  <path d="M14 4.1 12 6" />
+                  <path d="m5.1 8-2.9-.8" />
+                  <path d="m6 12-1.9 2" />
+                  <path d="M7.2 2.2 8 5.1" />
+                  <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" />
+                </svg>
+              </PrimaryButton>
+            </Link>
           </div>
         </div>
       </section>
@@ -353,7 +359,11 @@ export default function Home() {
               regardless of whether you are a hospital, clinic, or home-care
               provider. We empower, train, and assist in addition to providing.
             </p>
-            <SecondaryButton className="mt-4">Get In Touch</SecondaryButton>
+            <Link href="/services">
+              <SecondaryButton className="w-full mt-4">
+                Get In Touch
+              </SecondaryButton>
+            </Link>
           </div>
         </div>
       </section>
@@ -384,7 +394,10 @@ export default function Home() {
                   <li key={index}>{benefit}</li>
                 ))}
               </ul>
-              <PrimaryButton className="absolute top-4 right-4 p-2">
+              <PrimaryButton
+                className="absolute top-4 right-4 p-2"
+                onClick={() => toggleDialog("popup")}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -481,6 +494,7 @@ export default function Home() {
           </form>
         </div>
       </section>
+      <PopupForm id="popup" onClose={() => closeDialog("popup")} />
     </main>
   );
 }
