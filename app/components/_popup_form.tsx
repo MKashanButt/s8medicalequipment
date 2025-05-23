@@ -10,7 +10,7 @@ type PopupDialogProps = {
 export default function PopupForm({ id, onClose }: PopupDialogProps) {
   return (
     <div
-      className="hidden w-full h-screen absolute top-0 left-0 bg-black/60 flex items-center justify-center"
+      className="hidden w-full h-screen fixed z-100 top-0 left-0 bg-black/60 flex items-center justify-center"
       id={id}
     >
       <div className="relative bg-[#65AD47] p-2 rounded-sm w-[60%]">
