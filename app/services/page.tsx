@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { PrimaryButton, SecondaryButton } from "../components/_button";
 import Link from "next/link";
+import { toggleDialog } from "../utils/DialogHelper";
 
 export default function Services() {
   return (
@@ -26,9 +29,11 @@ export default function Services() {
             integration and dependable performance at every stage, whether for
             clinics, hospitals, or home care agencies.
           </p>
-          <SecondaryButton className="px-8 md:px-12 mt-4">
-            Learn More
-          </SecondaryButton>
+          <Link href="/about-us">
+            <SecondaryButton className="px-8 md:px-12 mt-4">
+              Learn More
+            </SecondaryButton>
+          </Link>
         </div>
       </section>
 
@@ -145,7 +150,12 @@ export default function Services() {
               regardless of whether you are a hospital, clinic, or home-care
               provider. We empower, train, and assist in addition to providing.
             </p>
-            <SecondaryButton className="mt-4">Get In Touch</SecondaryButton>
+            <SecondaryButton
+              className="mt-4"
+              onClick={() => toggleDialog("popup")}
+            >
+              Get In Touch
+            </SecondaryButton>
           </div>
         </div>
       </section>
@@ -218,7 +228,10 @@ export default function Services() {
                 <p className="text-center text-xs md:text-sm mt-2">
                   {product.description}
                 </p>
-                <PrimaryButton className="w-full mt-4">
+                <PrimaryButton
+                  className="w-full mt-4"
+                  onClick={() => toggleDialog("popup")}
+                >
                   Learn More
                 </PrimaryButton>
               </div>
@@ -266,7 +279,10 @@ export default function Services() {
                   </p>
                 </div>
               </div>
-              <PrimaryButton className="mt-2 w-full md:w-auto">
+              <PrimaryButton
+                className="mt-2 w-full md:w-auto"
+                onClick={() => toggleDialog("popup")}
+              >
                 Learn More
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -328,7 +344,10 @@ export default function Services() {
                   </p>
                 </div>
               </div>
-              <PrimaryButton className="mt-2 w-full md:w-auto">
+              <PrimaryButton
+                className="mt-2 w-full md:w-auto"
+                onClick={() => toggleDialog("popup")}
+              >
                 Learn More
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
