@@ -1,14 +1,14 @@
 export function toggleDialog(id: string) {
     const dialog = document.getElementById(id)
     if (dialog) {
-        dialog.style.display = " block"
-        dialog.style.display = "flex"
+        dialog.classList.remove('hidden')
+        dialog.classList.add('flex')
     }
 }
 
 export function closeDialog(id: string) {
     const dialog = document.getElementById(id)
     if (dialog) {
-        dialog.style.display = "none";
+        dialog.classList.add('hidden')
     }
 }
