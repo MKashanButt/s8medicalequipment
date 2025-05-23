@@ -5,6 +5,7 @@ import { PrimaryButton, SecondaryButton } from "../components/_button";
 import productData from "@/public/data/products.json";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { toggleDialog } from "../utils/DialogHelper";
 
 interface Product {
   id: string;
@@ -40,7 +41,10 @@ export default function AboutUs() {
             Everything we do, from our beginnings to our strategy, is based on
             the same goal: improving care with uncompromising technology.
           </p>
-          <SecondaryButton className="px-8 md:px-12 mt-4">
+          <SecondaryButton
+            className="px-8 md:px-12 mt-4"
+            onClick={() => toggleDialog("popup")}
+          >
             Learn More
           </SecondaryButton>
         </div>
@@ -237,7 +241,10 @@ export default function AboutUs() {
                   <h2 className="text-lg md:text-xl font-semibold mb-2">
                     {product.name}
                   </h2>
-                  <PrimaryButton className="absolute top-2 right-2 p-2">
+                  <PrimaryButton
+                    className="absolute top-2 right-2 p-2"
+                    onClick={() => toggleDialog("popup")}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -290,7 +297,10 @@ export default function AboutUs() {
                   S8 Medical Equipments offers a wide selection of Durable
                   Medical Equipment (DME).
                 </p>
-                <PrimaryButton className="mt-2 w-full sm:w-auto">
+                <PrimaryButton
+                  className="mt-2 w-full sm:w-auto"
+                  onClick={() => toggleDialog("popup")}
+                >
                   Learn More
                 </PrimaryButton>
               </div>
@@ -322,7 +332,10 @@ export default function AboutUs() {
                   promise that every product meets strict safety standards and
                   is backed by competent support and maintenance services.
                 </p>
-                <PrimaryButton className="mt-2 w-full sm:w-auto">
+                <PrimaryButton
+                  className="mt-2 w-full sm:w-auto"
+                  onClick={() => toggleDialog("popup")}
+                >
                   Learn More
                 </PrimaryButton>
               </div>
