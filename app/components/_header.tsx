@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { PrimaryButton } from "./_button";
 import Link from "next/link";
+import PopupForm from "./_popup_form";
+import { closeDialog, toggleDialog } from "../utils/DialogHelper";
 
 export default function Header() {
   return (
@@ -112,7 +116,10 @@ export default function Header() {
                 </li>
               </Link>
               <li className="mt-2 md:mt-0">
-                <PrimaryButton className="text-sm md:text-base px-3 py-1 md:px-4 md:py-2">
+                <PrimaryButton
+                  className="text-sm md:text-base px-3 py-1 md:px-4 md:py-2"
+                  onClick={() => toggleDialog("popup")}
+                >
                   Contact Us
                 </PrimaryButton>
               </li>
@@ -120,6 +127,7 @@ export default function Header() {
           </nav>
         </header>
       </div>
+      <PopupForm id="popup" onClose={() => closeDialog("popup")} />
     </section>
   );
 }
