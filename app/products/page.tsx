@@ -5,6 +5,8 @@ import { PrimaryButton, SecondaryButton } from "../components/_button";
 import productData from "@/public/data/products.json";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { closeDialog, toggleDialog } from "../utils/DialogHelper";
+import PopupForm from "../components/_popup_form";
 
 interface Product {
   id: string;
@@ -52,7 +54,6 @@ export default function Products() {
           </Link>
         </div>
       </section>
-
       {/* Trending Products Section */}
       <section className="w-full px-4 md:w-[90%] lg:w-[80%] mx-auto py-8 md:py-16 border-b-2 border-[#65AD47]">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide py-4 border-b-2 border-[#65AD47]">
@@ -104,12 +105,16 @@ export default function Products() {
               <p className="text-center text-sm md:text-base mt-2">
                 {product.description}
               </p>
-              <PrimaryButton className="w-full mt-6">Learn More</PrimaryButton>
+              <PrimaryButton
+                className="w-full mt-6"
+                onClick={() => toggleDialog("popup")}
+              >
+                Learn More
+              </PrimaryButton>
             </div>
           ))}
         </div>
       </section>
-
       {/* Product Listing Section */}
       <section className="w-full px-4 md:w-[90%] lg:w-[80%] mx-auto py-8 md:py-16 border-b-2 border-[#65AD47]">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide py-4 border-b-2 border-[#65AD47]">
@@ -137,7 +142,10 @@ export default function Products() {
                   <li key={index}>{benefit}</li>
                 ))}
               </ul>
-              <PrimaryButton className="absolute top-4 right-4 p-2">
+              <PrimaryButton
+                className="absolute top-4 right-4 p-2"
+                onClick={() => toggleDialog("popup")}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -159,7 +167,6 @@ export default function Products() {
           ))}
         </div>
       </section>
-
       {/* Reviews Section */}
       <section className="w-full px-4 md:w-[90%] lg:w-[80%] mx-auto py-8 md:py-16">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide py-4 border-b-2 border-[#65AD47]">
@@ -215,6 +222,7 @@ export default function Products() {
           ))}
         </div>
       </section>
+      <PopupForm id="popup" onClose={() => closeDialog("popup")} />
     </main>
   );
 }
