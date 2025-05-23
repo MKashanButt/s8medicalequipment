@@ -9,8 +9,7 @@ import { PrimaryButton, SecondaryButton } from "./components/_button";
 import { useEffect, useState } from "react";
 import productsData from "@/public/data/products.json";
 import Link from "next/link";
-import { closeDialog, toggleDialog } from "./utils/DialogHelper";
-import PopupForm from "./components/_popup_form";
+import { toggleDialog } from "./utils/DialogHelper";
 
 interface Product {
   id: string;
@@ -494,7 +493,6 @@ export default function Home() {
           </form>
         </div>
       </section>
-      <PopupForm id="popup" onClose={() => closeDialog("popup")} />
     </main>
   );
 }
