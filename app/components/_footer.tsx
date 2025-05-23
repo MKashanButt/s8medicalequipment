@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { closeDialog, toggleDialog } from "../utils/DialogHelper";
+import PopupForm from "./_popup_form";
 
 export default function Footer() {
   return (
@@ -167,7 +171,12 @@ export default function Footer() {
               <Link href="/about-us">About Us</Link>
             </li>
             <li className="hover:text-[#65AD47] transition">
-              <Link href="/contact">Contact Us</Link>
+              <button
+                onClick={() => toggleDialog("popup")}
+                className="cursor-pointer"
+              >
+                Contact Us
+              </button>
             </li>
           </ul>
         </div>
@@ -180,6 +189,7 @@ export default function Footer() {
           All Rights Reserved.
         </p>
       </div>
+      <PopupForm id="popup" onClose={() => closeDialog("popup")} />
     </footer>
   );
 }
