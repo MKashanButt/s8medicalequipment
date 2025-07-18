@@ -1,5 +1,6 @@
 "use client";
 
+import { FormEvent } from "react";
 import { SecondaryButton } from "./_button";
 
 type PopupDialogProps = {
@@ -8,6 +9,45 @@ type PopupDialogProps = {
 };
 
 export default function PopupForm({ id, onClose }: PopupDialogProps) {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data: Record<string, any> = {};
+
+    formData.forEach((value, key) => {
+      if (key !== "consent") {
+        data[key] = value;
+      }
+    });
+
+    try {
+      const res = await fetch(
+        "https://healthmedneeds.com/api/s8-medical-equipment",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
+
+      const result = await res.json();
+      console.log(result);
+      console.log("Submitting:", data);
+
+      if (result.success) {
+        alert("Form submitted successfully!");
+        onClose();
+      } else {
+        alert("Something went wrong.");
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      alert("Network error occurred.");
+    }
+  };
   return (
     <div
       className="hidden w-full h-screen fixed z-100 top-0 left-0 bg-black/60 flex items-center justify-center"
@@ -20,27 +60,23 @@ export default function PopupForm({ id, onClose }: PopupDialogProps) {
         >
           X
         </button>
-        <form action="" method="post" className="py-2 w-full md:w-2/3 mx-auto">
+        <form
+          onSubmit={handleSubmit}
+          method="post"
+          className="py-2 w-full md:w-2/3 mx-auto"
+        >
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl text-white text-center">
             Check Your Qualification
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
             {/* Form Fields */}
             {[
-              { id: "first_name", label: "First Name", type: "text" },
-              { id: "last_name", label: "Last Name", type: "text" },
-              { id: "gender", label: "Gender", type: "text" },
-              { id: "street_address", label: "Street Address", type: "text" },
-              { id: "city", label: "City", type: "text" },
-              { id: "state", label: "State", type: "text" },
-              { id: "zip", label: "Zip", type: "text" },
-              { id: "phone_no", label: "Phone No", type: "tel" },
-              { id: "dob", label: "Date of Birth", type: "date" },
-              {
-                id: "best_time_to_contact",
-                label: "Best Time To Contact",
-                type: "text",
-              },
+              { id: "fname", label: "First Name", type: "text" },
+              { id: "lname", label: "Last Name", type: "text" },
+              { id: "zip_code", label: "Zip Code", type: "text" },
+              { id: "phone", label: "Phone", type: "text" },
+              { id: "dob", label: "DOB", type: "date" },
+              { id: "message", label: "Message", type: "text" },
             ].map((field) => (
               <div
                 key={field.id}

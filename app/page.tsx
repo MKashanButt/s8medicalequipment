@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 import { PrimaryButton, SecondaryButton } from "./components/_button";
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import productsData from "@/public/data/products.json";
 import Link from "next/link";
 import { toggleDialog } from "./utils/DialogHelper";
@@ -19,6 +19,44 @@ interface Product {
 }
 
 export default function Home() {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data: Record<string, any> = {};
+
+    formData.forEach((value, key) => {
+      if (key !== "consent") {
+        data[key] = value;
+      }
+    });
+
+    try {
+      const res = await fetch(
+        "https://healthmedneeds.com/api/s8-medical-equipment",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
+
+      const result = await res.json();
+      console.log(result);
+      console.log("Submitting:", data);
+
+      if (result.success) {
+        alert("Form submitted successfully!");
+      } else {
+        alert("Something went wrong.");
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      alert("Network error occurred.");
+    }
+  };
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -427,27 +465,19 @@ export default function Home() {
           </h2>
           <hr className="h-1 bg-white w-full md:w-2/3 border-white rounded-lg my-4 mx-auto" />
           <form
-            action=""
+            onSubmit={handleSubmit}
             method="post"
             className="py-2 w-full md:w-2/3 mx-auto"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
               {/* Form Fields */}
               {[
-                { id: "first_name", label: "First Name", type: "text" },
-                { id: "last_name", label: "Last Name", type: "text" },
-                { id: "gender", label: "Gender", type: "text" },
-                { id: "street_address", label: "Street Address", type: "text" },
-                { id: "city", label: "City", type: "text" },
-                { id: "state", label: "State", type: "text" },
-                { id: "zip", label: "Zip", type: "text" },
-                { id: "phone_no", label: "Phone No", type: "tel" },
-                { id: "dob", label: "Date of Birth", type: "date" },
-                {
-                  id: "best_time_to_contact",
-                  label: "Best Time To Contact",
-                  type: "text",
-                },
+                { id: "fname", label: "First Name", type: "text" },
+                { id: "lname", label: "Last Name", type: "text" },
+                { id: "zip_code", label: "Zip Code", type: "text" },
+                { id: "phone", label: "Phone", type: "text" },
+                { id: "dob", label: "DOB", type: "date" },
+                { id: "message", label: "Message", type: "text" },
               ].map((field) => (
                 <div
                   key={field.id}
