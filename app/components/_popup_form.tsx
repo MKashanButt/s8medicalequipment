@@ -115,7 +115,10 @@ export default function PopupForm({ id, onClose }: PopupDialogProps) {
             </span>
           </div>
           <div className="flex justify-center mt-6">
-            <SecondaryButton className="w-full md:w-2/3 hover:bg-white hover:border-white hover:text-[#65AD47]">
+            <SecondaryButton
+              type="submit"
+              className="w-full md:w-2/3 hover:bg-white hover:border-white hover:text-[#65AD47]"
+            >
               See If I Qualify
             </SecondaryButton>
           </div>
